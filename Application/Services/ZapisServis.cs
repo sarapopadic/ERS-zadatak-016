@@ -19,8 +19,17 @@ public sealed class ZapisServis
 
     public Result Dodaj(Zapis zapis)
     {
-        // TODO: definisati poslovna pravila i pozvati repozitorijum.
-        // Primer pokazuje gde pripada use case, ne daje rešenje zadatka.
-        return Result.Failure("zadatak.nije_implementirano", "Implementirati prema specifikaciji.");
+        if (zapis == null)
+        {
+            return Result.Failure("zapis.null", "Zapis ne sme biti null.");
+        }
+
+        if (!zapis.JeIspravan(out string porukaGreske))
+        {
+            return Result.Failure("zapis.neispravan", porukaGreske);
+        }
+
+        _repozitorijum.Sacuvaj(zapis);
+        return Result.Success();
     }
 }
