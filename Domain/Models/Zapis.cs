@@ -1,5 +1,4 @@
 namespace Domain.Models;
-
 public abstract class Zapis
 {
     public Guid Id { get; init; } = Guid.NewGuid();
