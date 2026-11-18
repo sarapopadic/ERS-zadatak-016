@@ -43,7 +43,7 @@ public sealed class ZapisServis
         var rezultatiSvi = _repozitorijum.Svi();
         if (!rezultatiSvi.IsSuccess)
         {
-            return Result<IReadOnlyList<Zapis>>.Failure(rezultatiSvi.Error.Code, rezultatiSvi.Error.Message);
+            return Result<IReadOnlyList<Zapis>>.Failure(rezultatiSvi.Error!.Code, rezultatiSvi.Error.Message);
         }
 
         if (rezultatiSvi.Value == null)
@@ -52,7 +52,7 @@ public sealed class ZapisServis
         }
 
         var filtrirani = rezultatiSvi.Value
-            .Where(z => z != null && z.Izdavac == null && z.Izdavac.Equals(izdavac, StringComparison.OrdinalIgnoreCase))
+            .Where(z => z != null && z.Izdavac != null && z.Izdavac.Equals(izdavac, StringComparison.OrdinalIgnoreCase))
             .ToList();
 
         if (filtrirani.Count == 0)
@@ -91,7 +91,7 @@ public sealed class ZapisServis
         }
 
         var zapis = rezultatPronalazenja.Value;
-        if (!zapis.Pozajmi(out string porukaGreske))
+        if (!zapis.Razduzi(out string porukaGreske))
         {
             return Result.Failure("zapis.neispravan", porukaGreske);
         }
