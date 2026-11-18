@@ -38,9 +38,9 @@ dotnet run --project Presentation -- json
 
 ## Студентски подаци
 
-- Број и назив задатка: _____________________________
-- Јавни GitHub репозиторијум: _______________________
-- Pull Request 1: __________________________________
-- Pull Request 2: __________________________________
+- Број и назив задатка: Klub društvenih igara
+- Јавни GitHub репозиторијум: https://github.com/sarapopadic/ERS-zadatak-016
+- Pull Request 1: https://github.com/sarapopadic/ERS-zadatak-016/pull/2
+- Pull Request 2: https://github.com/sarapopadic/ERS-zadatak-016/pull/1
 
 README допунити упутством за покретање и тестирање, избором режима чувања и везама ка спојеним захтевима за спајање.
