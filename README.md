@@ -38,7 +38,7 @@ dotnet run --project Presentation -- json
 
 ## Студентски подаци
 
-- Број и назив задатка: Klub društvenih igara
+- Број и назив задатка: Klub društvenih igara 016
 - Јавни GitHub репозиторијум: https://github.com/sarapopadic/ERS-zadatak-016
 - Pull Request 1: https://github.com/sarapopadic/ERS-zadatak-016/pull/2
 - Pull Request 2: https://github.com/sarapopadic/ERS-zadatak-016/pull/1
